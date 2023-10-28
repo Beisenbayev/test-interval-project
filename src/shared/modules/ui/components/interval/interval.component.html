@@ -1,0 +1,21 @@
+<div class="interval">
+	<div class="interval__events">
+		<div
+			*ngFor="let event of eventsProps"
+			class="interval__event"
+			[ngStyle]="getEventStyles(event)"
+		>
+			<ul class="interval__event-info">
+				<li>
+					<b>Type: </b> <span>{{ getEventStatus(event.type) }}</span>
+				</li>
+				<li>
+					<b>Start: </b> <span>{{ getParsedEventDate(event.dateStart) }}</span>
+				</li>
+				<li>
+					<b>End: </b> <span>{{ getParsedEventDate(event.dateEnd) }}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
